@@ -21,6 +21,7 @@
         "allow-pascal-case"
       ]
     },
-    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }]
+    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
+    "react-hooks-nesting": true
   }
 }
