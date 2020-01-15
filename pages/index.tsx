@@ -1,4 +1,4 @@
 import React from 'react';
-import Title from '../src/components/Title';
+import Title from '@components/Title';
 
 export default () => <Title>My page</Title>;
