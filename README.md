@@ -54,3 +54,6 @@ This is an amalgamation of the 2 existing examples:
 
 How to Config React Project with Next.js, Typescript, TSLint, and Jest?
 https://dev.to/oahehc/how-to-config-react-project-with-next-js-typescrirpt-tslint-and-jest-11l0
+
+Setting up Jest + React-Testing-Library
+https://dev.to/aromanarguello/getting-started-with-jest-react-testing-library-4nga
