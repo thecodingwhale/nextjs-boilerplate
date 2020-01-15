@@ -51,3 +51,6 @@ This is an amalgamation of the 2 existing examples:
 
 - [with-typescript](https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
 - [with-styled-components](https://github.com/zeit/next.js/tree/canary/examples/with-styled-components)
+
+How to Config React Project with Next.js, Typescript, TSLint, and Jest?
+https://dev.to/oahehc/how-to-config-react-project-with-next-js-typescrirpt-tslint-and-jest-11l0
