@@ -10,6 +10,5 @@ module.exports = {
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
   testRegex: '/__tests__/.*\\.(test|spec)\\.tsx?$',
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };
