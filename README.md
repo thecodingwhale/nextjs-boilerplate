@@ -57,3 +57,6 @@ https://dev.to/oahehc/how-to-config-react-project-with-next-js-typescrirpt-tslin
 
 Setting up Jest + React-Testing-Library
 https://dev.to/aromanarguello/getting-started-with-jest-react-testing-library-4nga
+
+Next.js ▲ + Typescript + Storybook The Really Simple Guide 2019
+https://www.adrianprieto.com/next-js-typescript-storybook-the-really-simple-guide-2019/

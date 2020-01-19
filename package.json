@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "tslint": "tslint -p . -c tslint.json",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006 -c .storybook"
   },
   "husky": {
     "hooks": {
@@ -28,6 +29,8 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/react": "^5.3.6",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@types/jest": "^24.0.25",
@@ -35,7 +38,9 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.2",
+    "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-preset-react-app": "^9.1.0",
     "husky": "^4.0.9",
     "jest": "^24.9.0",
     "jest-watch-typeahead": "^0.4.2",
