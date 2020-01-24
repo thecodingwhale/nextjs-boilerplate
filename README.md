@@ -1,62 +1,10 @@
-# TypeScript & Styled Components Next.js example
+# development
 
-This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
+run build
+`docker build -t next-app .`
 
-## Deploy your own
+run docker image
+`docker run --rm -it -p 3000:3000 next-app`
 
-Deploy the example using [ZEIT Now](https://zeit.co/now):
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/zeit/next.js/tree/canary/examples/with-typescript-styled-components)
-
-## How to use it?
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-styled-components with-typescript-app
-# or
-yarn create next-app --example with-typescript-styled-components with-typescript-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-typescript-styled-components
-cd with-typescript-styled-components
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download)):
-
-```bash
-now
-```
-
-## The idea behind the example
-
-This is an amalgamation of the 2 existing examples:
-
-- [with-typescript](https://github.com/zeit/next.js/tree/canary/examples/with-typescript)
-- [with-styled-components](https://github.com/zeit/next.js/tree/canary/examples/with-styled-components)
-
-How to Config React Project with Next.js, Typescript, TSLint, and Jest?
-https://dev.to/oahehc/how-to-config-react-project-with-next-js-typescrirpt-tslint-and-jest-11l0
-
-Setting up Jest + React-Testing-Library
-https://dev.to/aromanarguello/getting-started-with-jest-react-testing-library-4nga
-
-Next.js ▲ + Typescript + Storybook The Really Simple Guide 2019
-https://www.adrianprieto.com/next-js-typescript-storybook-the-really-simple-guide-2019/
+run cicleci build
+`circleci local execute --job build`
