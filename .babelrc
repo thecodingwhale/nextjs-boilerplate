@@ -10,6 +10,13 @@
           "@components": "./src/components"
         }
       }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
     ]
   ]
 }
