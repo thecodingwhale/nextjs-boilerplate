@@ -1,5 +1,8 @@
 # development
 
+run storybook
+`npm run storybook`
+
 run build
 `docker build -t next-app .`
 
