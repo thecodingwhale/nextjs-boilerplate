@@ -1,26 +1,38 @@
-import { createServer } from 'http';
-import { parse } from 'url';
+import Koa from 'koa';
+import Router from 'koa-router';
 import next from 'next';
 
-const port = parseInt(process.env.PORT || '3000', 10);
+const port = parseInt((process as any).env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  createServer((req, res) => {
-    const parsedUrl = parse(req.url!, true);
-    const { pathname, query } = parsedUrl;
+  const server = new Koa();
+  const router = new Router();
 
-    if (pathname === '/a') {
-      app.render(req, res, '/a', query);
-    } else if (pathname === '/b') {
-      app.render(req, res, '/b', query);
-    } else {
-      handle(req, res, parsedUrl);
-    }
-  }).listen(port);
+  router.get('/a', async ctx => {
+    await app.render(ctx.req, ctx.res, '/a', ctx.query);
+    ctx.respond = false;
+  });
 
-  // tslint:disable-next-line:no-console
-  console.log(`> Server listening at http://localhost:${port} as ${dev ? 'development' : process.env.NODE_ENV}`);
+  router.get('/b', async ctx => {
+    await app.render(ctx.req, ctx.res, '/b', ctx.query);
+    ctx.respond = false;
+  });
+
+  router.get('*', async ctx => {
+    await handle(ctx.req, ctx.res);
+    ctx.respond = false;
+  });
+
+  server.use(async (ctx, next) => {
+    ctx.res.statusCode = 200;
+    await next();
+  });
+
+  server.use(router.routes());
+  server.listen(port, () => {
+    console.log(`> Ready on http://localhost:${port}`);
+  });
 });
