@@ -25,6 +25,6 @@
     ],
     "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
     "react-hooks-nesting": true,
-    "arrow-parens": [true, "ban-single-arg-parens"]
+    "ter-arrow-parens": [true, "as-needed"]
   }
 }
