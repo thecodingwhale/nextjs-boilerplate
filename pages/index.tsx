@@ -1,10 +1,8 @@
 import React from 'react';
-import Title from '@components/Title';
-import { DatePicker } from 'antd';
+import StateHooksComponent from '@components/StateHooksComponent';
 
 export default () => (
   <React.Fragment>
-    <Title>My page</Title>
-    <DatePicker />
+    <StateHooksComponent />
   </React.Fragment>
 );
